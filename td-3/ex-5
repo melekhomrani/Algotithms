@@ -1,0 +1,15 @@
+fonction sousChaine(ch: chaine, i: entier, j: entier): * caractère
+    var
+        k: entier
+        sousCh: * caractère
+    debut
+        si (i < 0) ou (j > longueur(ch)) ou (i > j) alors
+            retourner NULL
+        fin si
+        sousCh <- allouer(j - i + 2)
+        pour k de 0 à j - i faire
+            sousCh + k <- ch + i + k
+        fpour
+        *(sousCh + j - i + 1) <- '\0' 
+        retourner sousCh
+    fin
