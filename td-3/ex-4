@@ -1,0 +1,17 @@
+var
+    T: tableau[1..256] d'entier
+    P1, P2: *entier
+    aide: entier
+
+debut
+    P1 <- T
+    P2 <- T + 255
+
+    TantQue P1 < P2
+        aide <- *P1
+        *P1 <- *P2
+        *P2 <- aide
+        P1++
+        P2--
+    FinTantQue
+fin
