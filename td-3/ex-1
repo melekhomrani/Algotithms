@@ -1,0 +1,11 @@
+var
+    //A, B: *entier
+    A: tableau[0..256] de entier
+    B: tableau[0..256] de entier
+    n, m: entier
+
+Debut
+    pour i de 0 a m-1 faire
+        *(A+n+i) <- *(B+i)
+    fin pour
+Fin
