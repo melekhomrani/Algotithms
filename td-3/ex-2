@@ -1,0 +1,22 @@
+var
+    x, occ: entier
+    T: tableau[1..256] d'entiers
+    A, addresseX: *entier
+
+Debut
+    Lire(x)
+
+    A <- T
+    addresseX <- &x
+
+    occ <- 0
+    
+    TantQue *A <> Null faire
+        Si *A = *addresseX alors
+            occ <- occ + 1
+        FinSi
+        A <- A + 1
+    FinTantQue
+
+    Ecrire(occ)
+Fin
