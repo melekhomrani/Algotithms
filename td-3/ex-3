@@ -1,0 +1,19 @@
+// concederant que le premier indice du tableau est 1
+fonction minMax(T: tab, len: entier): (*entier, *entier)
+    var
+        Min, Max: *entier
+        i: entier
+    debut
+        Min <- T
+        Max <- T
+        pour i de 2 a len faire
+            si T[i] < *P alors
+                P <- P + i
+            sinon
+                si T[i] > *Q alors
+                    Q <- Q + i
+                fsi
+            fsi
+        fin pour
+        retourner (Min, Max)
+    fin
